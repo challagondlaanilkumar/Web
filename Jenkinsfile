@@ -19,7 +19,7 @@ pipeline{
                 cd web
                 sonar-scanner \
                 -Dsonar.projectKey=web \
-                -Dsonar.sources=. \
+                -Dsonar.sources=web \
                 -Dsonar.host.url=http://139.59.36.21:9000 \
                 -Dsonar.token=sqp_b6044f0bdf418cae5594e48a88a2e49e8e7daaa5
             }
