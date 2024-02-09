@@ -1,14 +1,15 @@
 pipeline{
     agent any
-
+/*
     tools{
-        
+
     }
 
     environment {
         // Define environment variables if needed
         
     }
+    */
 
     stages{
         stage('git chekout'){
