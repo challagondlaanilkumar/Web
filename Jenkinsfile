@@ -19,12 +19,11 @@ pipeline{
         }
         stage('sonar'){
             steps{
-                withSonarQubeEnv('sonar') {
-                  sh'''  sonar-scanner \
-                    -Dssonar.projectKey=web \
-                    -Dsonar.sources=. \
-                    -Dsonar.host.url=https://sonar.akcdevops.online '''
-               }
+               sh '''sonar-scanner \
+                        -Dsonar.projectKey=web \
+                        -Dsonar.sources=. \
+                        -Dsonar.host.url=https://sonar.akcdevops.online \
+                        -Dsonar.login=sqp_8d2efaa19df0559d769546a30122c2364c57d428'''
             }
         } 
     }
