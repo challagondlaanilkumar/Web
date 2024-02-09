@@ -14,10 +14,10 @@ pipeline{
     stages{
         stage('git chekout'){
             steps{
-                sh 'git clone https://github.com/challagondlaanilkumar/web.git '
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/challagondlaanilkumar/web.git'
             }
         }
-        stage('soanr'){
+        stage('sonar'){
             steps{
                 withSonarQubeEnv('sonar') {
                   sh'''  sonar-scanner \
