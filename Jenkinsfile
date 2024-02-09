@@ -19,7 +19,7 @@ pipeline{
         }
         stage('soanr'){
             steps{
-                cd web
+                cd static
                 withSonarQubeEnv(credentialsId: 'sonar-web-token') {
                     sonar-scanner \
                     -Dssonar.projectKey=web \
