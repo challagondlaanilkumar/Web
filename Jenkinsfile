@@ -21,10 +21,10 @@ pipeline{
             steps{
                 cd web
                 withSonarQubeEnv(credentialsId: 'sonar-web-token') {
-                    sonar-scanner \
+                  sh'''  sonar-scanner \
                     -Dssonar.projectKey=web \
-                    -Dsonar.sources=static/. \
-                    -Dsonar.host.url=https://sonar.akcdevops.online
+                    -Dsonar.sources=. \
+                    -Dsonar.host.url=https://sonar.akcdevops.online '''
                }
             }
         } 
