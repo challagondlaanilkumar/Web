@@ -23,7 +23,7 @@ pipeline{
                 withSonarQubeEnv(credentialsId: 'sonar-web-token') {
                     sonar-scanner \
                     -Dssonar.projectKey=web \
-                    -Dsonar.sources=static/. \
+                    -Dsonar.sources=. \
                     -Dsonar.host.url=https://sonar.akcdevops.online
                }
             }
